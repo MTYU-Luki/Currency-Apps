@@ -1,5 +1,5 @@
 ﻿# Currency Apps
-Aplikasi ini mencakup fungsi perhitungan ilai tukar mata uang dari dollar ke rupiah. Satu dollar dianggap senilai Rp. 15.000
+Aplikasi ini mencakup fungsi perhitungan nilai tukar mata uang dari dollar ke rupiah. Satu dollar dianggap senilai Rp. 15.000
 
 ## Scope & Functionalities
 - User dapat memasukan angka
