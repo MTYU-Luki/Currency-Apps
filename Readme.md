@@ -51,4 +51,4 @@ public string usdToIdr(string nominal)
 - Fungsi Regex adalah mencari suatu pola spesifik dari fungsi `Regex("[^0-9,-]+");`
 
 # Jawaban No 5
-![Class Diagram] (https://github.com/MTYU-Luki/Currency-Apps/blob/master/Currency%20Apps/ClassDiagram1.png)
+![Class Diagram](https://github.com/MTYU-Luki/Currency-Apps/blob/master/Currency%20Apps/ClassDiagram1.png)
