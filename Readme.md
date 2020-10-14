@@ -17,6 +17,20 @@ public MainWindow()
         }
 ```
 
+Dibawah ini adalah fungsi jika kita mengeklik pada button hitung 
+```csharp
+private void Button_Hitung_Click(object sender, RoutedEventArgs e)
+        {
+            var nominalinput = InputTextBox.Text;
+            var result = "INVALID";
+            if(currency.isAllowed(nominalinput))
+            {
+                result = currency.usdToIdr(nominalinput);
+            }
+            resultLabel.Content = result;
+        }
+```
+
 logika perhitungan terdapat pada class `CurencyController.cs` sebagai berikut cara kerjanya;
 
 ```csharp
@@ -37,12 +51,12 @@ public string usdToIdr(string nominal)
 
 
 # Jawaban No 1
-- pada percobaan 1, jika kita memasukan angka berapapun pada textbox kemudian kita klik button hitung, maka yang akan keluar adalah sama seperti angka yang kita masukan
-- Percobaan 2, jika kita memasukan sebarang angka pada textbox dan kita klik button hitung maka angka tersebut akan dikalikan 15000 `(var result = nominalDouble * 15000;)`, dan jika kita  memasukan sembarang huruf pada textbox maka akan terjadi carsh, karena kita baru membuat fugsi yang bisa meghitung angka.
-- Percobaan 3, sama seperti percobaan 2 , cuma yang membedakan jika kita memasukan huruf ke text box akan menampilkan kalimat "INVALID" karena kita sudah menambahkan fugsi jika kita memasukan huruf.
+- pada percobaan 1, jika kita memasukan angka/text pada textbox kemudian kita klik button hitung, maka yang akan keluar adalah sama seperti angka/text yang kita masukan
+- Percobaan 2, jika kita memasukan sebarang angka pada inputan kemudian klik button hitung maka angka tersebut akan dikalikan 15000 karena menjalankan fungsi `(var result = nominalDouble * 15000;)`, dan jika kita  memasukan text pada inputan maka akan terjadi carsh, karena kita baru membuat fungsi yang bisa meghitung angka.
+- Percobaan 3, sama seperti percobaan 2 , cuma yang membedakan jika kita memasukan text pada inputan maka akan menampilkan kalimat "INVALID" karena kita sudah menambahkan fugsi jika kita memasukan huruf maka akan mengembalikan invalid.
 
 # Jawabn No 2
-- Untuk memisah logika/ fungsi dari perhitungan matematika `CurencyController.cs` dan logika untuk mengontrol tampilan `Mainwindows.xaml.cs`
+- Untuk memisah logika fungsi dari perhitungan matematika `CurencyController.cs` dan logika untuk mengontrol tampilan `Mainwindows.xaml.cs`
 
 # Jawaban No 3
 - Untuk megizinkan dari inputtextbox, jika yang diinputkan angka maka akan menjalankan fungsi matematic dan jika yang diinputkan huruf maka akan mengembalikan "INVALID" karena tidak diizinkan.
