@@ -7,6 +7,14 @@ namespace Currency_Apps
 {
     class CurrencyController
     {
+        public int Property
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public string usdToIdr(string nominal)
         {
             var nominalDouble = Convert.ToDouble(nominal);
